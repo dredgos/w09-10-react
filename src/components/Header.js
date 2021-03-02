@@ -1,6 +1,6 @@
-const Header = () => (
+const Header = ( {children} ) => (
 <header>
-    <h1 className="jumbotron">Hello, world!</h1>
+    <h1 class="jumbotron">{children}</h1>
 </header>
 )
 
