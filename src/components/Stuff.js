@@ -1,14 +1,14 @@
-import HeaderClass from './HeaderClass'
+import HeaderClass from './state/HeaderClass'
 import Paragraph from './Paragraph'
 import Square from './Square'
-import PeopleClass from './PeopleClass'
-import Clicked from './Clicked'
-import SquareClass from './SquareClass'
-import ToggleText from './ToggleText'
-import Counter from './Counter'
-import StepCounter from './StepCounter'
-import CatchMe from './CatchMe'
-import RollCall from './RollCall'
+import PeopleClass from './state/PeopleClass'
+import Clicked from './state/Clicked'
+import SquareClass from './state/SquareClass'
+import ToggleText from './state/ToggleText'
+import Counter from './state/Counter'
+import StepCounter from './state/StepCounter'
+import CatchMe from './state/CatchMe'
+import RollCall from './state/RollCall'
 
 const Stuff = ( {displaySquare} ) => (
   <>
@@ -32,7 +32,7 @@ const Stuff = ( {displaySquare} ) => (
 
     <CatchMe jump={100} />
 
-    {/* <RollCall names={} /> */}
+    <RollCall names={['name1', 'name2', 'name3']} />
   </>
 )
 
