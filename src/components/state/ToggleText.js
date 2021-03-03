@@ -22,10 +22,10 @@ class ToggleText extends Component {
         let {initial, alternate} = this.props
 
         return(
-            <div>
-                <p>{clicked === false ? initial : alternate}</p>
+            <>
+                <p>{!clicked ? initial : alternate}</p>
                 <button onClick={this.handleClick}>Toggle</button>
-            </div>
+            </>
         )
     }
 }

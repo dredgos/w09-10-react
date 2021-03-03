@@ -34,11 +34,11 @@ class StepCounter extends Component {
     render() {
 
         return(
-            <div>
+            <>
                 <p>{this.state.stepCount}</p>
                 <button onClick={this.addStep}>+</button>
                 <button onClick={this.subtractStep}>-</button>
-            </div>
+            </>
         )
     }
 

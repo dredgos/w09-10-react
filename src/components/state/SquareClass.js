@@ -29,7 +29,7 @@ class SquareClass extends Component {
         let {colour} = this.props;
         
         return (
-            <div style={{...squareStyle, backgroundColor: clicked === false ? "green" : colour}} onClick={this.handleClick}></div>
+            <div style={{...squareStyle, backgroundColor: !clicked ? "green" : colour}} onClick={this.handleClick}></div>
         );
     }
 

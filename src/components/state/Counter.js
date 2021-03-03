@@ -34,11 +34,11 @@ class Counter extends Component {
     render() {
 
         return(
-        <div>
+        <>
             <p>{this.state.counter}</p>
             <button onClick={this.addCounter}>Add</button>
             <button onClick={this.subtractCounter}>Subtract</button>
-        </div>
+        </>
         )
     }
 }

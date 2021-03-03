@@ -9,6 +9,15 @@ import Counter from './state/Counter'
 import StepCounter from './state/StepCounter'
 import CatchMe from './state/CatchMe'
 import RollCall from './state/RollCall'
+import Colours from './state/Colours'
+
+let colours = [
+  "#C14412",
+  "#EBB31A",
+  "#8F5318",
+  "#009EAD",
+  "#395967",
+];
 
 const Stuff = ( {displaySquare} ) => (
   <>
@@ -33,6 +42,8 @@ const Stuff = ( {displaySquare} ) => (
     <CatchMe jump={100} />
 
     <RollCall names={['name1', 'name2', 'name3']} />
+
+    <Colours colours={colours}/>
   </>
 )
 
