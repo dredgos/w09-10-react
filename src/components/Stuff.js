@@ -16,6 +16,8 @@ import TempConverter from './forms/TempConvertor'
 import List from './forms/List'
 import GodCounter from './lifecycle/GodCounter'
 import TwoCounters from './lifecycle/TwoCounters'
+import Adder from './forms/Adder'
+import Transform from './forms/Transform'
 
 let colours = [
   "#C14412",
@@ -58,6 +60,10 @@ const Stuff = ( {displaySquare} ) => (
     <TempConverter /><hr />
 
     <List /><hr />
+
+    <Adder /><hr />
+
+    <Transform /><hr />
 
     <GodCounter /><hr />
 
