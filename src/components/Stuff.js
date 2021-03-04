@@ -14,6 +14,8 @@ import Length from './forms/Length'
 import PasswordStrength from './forms/PasswordStrength'
 import TempConverter from './forms/TempConvertor'
 import List from './forms/List'
+import GodCounter from './lifecycle/GodCounter'
+import TwoCounters from './lifecycle/TwoCounters'
 
 let colours = [
   "#C14412",
@@ -33,29 +35,33 @@ const Stuff = ( {displaySquare} ) => (
 
     <PeopleClass names = {["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"]}/>
 
-    <Clicked /><hr></hr>
+    <Clicked /><hr />
 
-    <SquareClass colour="hotpink"/><hr></hr>
+    <SquareClass colour="hotpink"/><hr />
 
-    <ToggleText initial="Hello" alternate="World"/><hr></hr>
+    <ToggleText initial="Hello" alternate="World"/><hr />
 
-    <Counter initial={50} max={100}/><hr></hr>
+    <Counter initial={50} max={100}/><hr />
 
-    <StepCounter step={5} max={100} /><hr></hr>
+    <StepCounter step={5} max={100} /><hr />
 
-    <CatchMe jump={100} /><hr></hr>
+    <CatchMe jump={100} /><hr />
 
-    <RollCall names={['name1', 'name2', 'name3']} /><hr></hr>
+    <RollCall names={['name1', 'name2', 'name3']} /><hr />
 
-    <Colours colours={colours}/><hr></hr>
+    <Colours colours={colours}/><hr />
 
-    <Length /><hr></hr>
+    <Length /><hr />
 
-    <PasswordStrength /><hr></hr>
+    <PasswordStrength /><hr />
 
-    <TempConverter /><hr></hr>
+    <TempConverter /><hr />
 
-    <List /><hr></hr>
+    <List /><hr />
+
+    <GodCounter /><hr />
+
+    <TwoCounters /> <hr />
   </>
 )
 
