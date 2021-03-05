@@ -22,7 +22,7 @@ class TransformNew extends Component {
     render() {
 
         let {input} = this.state;
-        let {transform} = this.props.transform;
+        let {transform} = this.props;
 
         return(
             <>

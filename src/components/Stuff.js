@@ -20,10 +20,11 @@ import GodCounter from './lifecycle/GodCounter'
 import TwoCounters from './lifecycle/TwoCounters'
 import Adder from './forms/Adder'
 import Transform from './forms/Transform'
-// import TransformNew from './forms/TransformNew'
+import TransformNew from './forms/TransformNew'
 import Lightbox from './lifecycle/Lightbox'
 import Footer from './Footer'
 import FourOhFour from '../FourOhFour'
+import Squared from './forms/Squared'
 
 
 let colours = [
@@ -95,7 +96,7 @@ const Stuff = ( {displaySquare} ) => (
 
             <Transform /><hr />
 
-            {/* <TransformNew transform={Squared}/><hr /> */}
+            <TransformNew transform={Squared}/><hr />
 
           </Route>
 
