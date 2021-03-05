@@ -1,10 +1,12 @@
+import { BrowserRouter as Router} from 'react-router-dom'
+
 import './App.css';
 import Stuff from './components/Stuff'
 
 const App = () => (
-
-  <Stuff displaySquare = {false}/>
-  
+  <Router>
+    <Stuff displaySquare = {false}/>
+  </Router>
 )
 
 export default App;

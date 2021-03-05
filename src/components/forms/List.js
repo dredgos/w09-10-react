@@ -3,8 +3,8 @@
 import { Component } from 'react'
 
 class List extends Component {
-    constructor(props){
-        super(props)
+    constructor(){
+        super()
 
         this.state = {
            input: "",
@@ -16,11 +16,9 @@ class List extends Component {
     }
     
     handleClick(){
-        const {list, input} = this.state;
+        let {list, input} = this.state;
 
-        this.setState({list: [...list, input], input: ""});
- 
-        
+        this.setState({list: [...list, input], input: ""});        
     }
 
     handleChange(e){

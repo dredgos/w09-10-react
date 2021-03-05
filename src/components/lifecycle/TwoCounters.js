@@ -18,19 +18,25 @@ class TwoCounters extends Component {
         this.handle2 = this.handle2.bind(this);
     }
 
-    componentDidMount() {
+    documentTitleUpdate() {
         let {value1, value2} = this.state;
         document.title = value1 + value2;
+
+    }
+
+    componentDidMount() {
+        this.title = document.title;
+        this.documentTitleUpdate();
     }
 
     componentDidUpdate() {
-        let {value1, value2} = this.state;
-        document.title = value1 + value2;
+        this.documentTitleUpdate();
     }
 
-    componentWillUnmount() {
-        
+    componentWillUnmount(){
+        document.title = this.title;
     }
+
 
     handle1() {  
         let {value1} = this.state;      

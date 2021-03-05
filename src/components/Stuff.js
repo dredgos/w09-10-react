@@ -1,3 +1,5 @@
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
 import HeaderClass from './state/HeaderClass'
 import Paragraph from './Paragraph'
 import Square from './Square'
@@ -18,6 +20,11 @@ import GodCounter from './lifecycle/GodCounter'
 import TwoCounters from './lifecycle/TwoCounters'
 import Adder from './forms/Adder'
 import Transform from './forms/Transform'
+// import TransformNew from './forms/TransformNew'
+import Lightbox from './lifecycle/Lightbox'
+import Footer from './Footer'
+import FourOhFour from '../FourOhFour'
+
 
 let colours = [
   "#C14412",
@@ -28,47 +35,88 @@ let colours = [
 ];
 
 const Stuff = ( {displaySquare} ) => (
-  <>
-    <HeaderClass>Hello World!</HeaderClass>
+  <Router>
+    <>        
+      <HeaderClass>Hello World!</HeaderClass>
+      <Switch>
+        <Route exact path="/">
 
-    <Paragraph> This is my amazing app! </Paragraph>
+          <Paragraph> This is my amazing app! </Paragraph>
 
-    {displaySquare ? <Square colour="blue"/> : null}
 
-    <PeopleClass names = {["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"]}/>
+        </Route>
 
-    <Clicked /><hr />
+          <Route path="/components">
+            
+            <PeopleClass names = {["James P. Sullivan", "Mike Wazowski", "Boo", "Randall Boggs", "Roz", "Fungus"]}/>
 
-    <SquareClass colour="hotpink"/><hr />
+            {displaySquare ? <Square colour="blue"/> : null}
 
-    <ToggleText initial="Hello" alternate="World"/><hr />
+            <Clicked /><hr />
 
-    <Counter initial={50} max={100}/><hr />
+            <SquareClass colour="hotpink"/><hr />
 
-    <StepCounter step={5} max={100} /><hr />
 
-    <CatchMe jump={100} /><hr />
+          </Route>
 
-    <RollCall names={['name1', 'name2', 'name3']} /><hr />
+          <Route path="/state">
 
-    <Colours colours={colours}/><hr />
+            <ToggleText initial="Hello" alternate="World"/><hr />
 
-    <Length /><hr />
+            <Counter initial={50} max={100}/><hr />
 
-    <PasswordStrength /><hr />
+            <StepCounter step={5} max={100} /><hr />
 
-    <TempConverter /><hr />
+            <CatchMe jump={100} /><hr />
 
-    <List /><hr />
+            <RollCall names={['name1', 'name2', 'name3']} /><hr />
 
-    <Adder /><hr />
+            <Colours colours={colours}/><hr />
+            
+          </Route>
 
-    <Transform /><hr />
+          <Route path="/squares/:colour" render={( {match} ) => ( <Square colour={match.params.colour} />)} />            
 
-    <GodCounter /><hr />
 
-    <TwoCounters /> <hr />
-  </>
+
+          <Route path="/steps/:max/:step" render={( {match} ) => ( <StepCounter max={+match.params.max} step={+match.params.step} />)} />
+
+          <Route path="/forms">
+            
+            <Length /><hr />
+
+            <PasswordStrength /><hr />
+
+            <TempConverter /><hr />
+
+            <List /><hr />
+
+            <Adder /><hr />
+
+            <Transform /><hr />
+
+            {/* <TransformNew transform={Squared}/><hr /> */}
+
+          </Route>
+
+
+          <Route path="/lifecycle">
+            
+            <GodCounter /><hr />
+
+            <TwoCounters /> <hr />
+            <Lightbox imgSrc="https://scx2.b-cdn.net/gfx/news/2018/1-park.jpg"/> <hr />
+
+          </Route>
+       
+
+      
+      <FourOhFour />
+      </Switch>
+      <Footer />
+
+    </>
+  </Router>
 )
 
 Stuff.defaultProps = {
