@@ -25,6 +25,8 @@ import Lightbox from './lifecycle/Lightbox'
 import Footer from './Footer'
 import FourOhFour from '../FourOhFour'
 import Squared from './forms/Squared'
+import Squares from './liftingstate/Squares'
+import SignUp from './liftingstate/SignUp'
 
 
 let colours = [
@@ -108,6 +110,11 @@ const Stuff = ( {displaySquare} ) => (
             <TwoCounters /> <hr />
             <Lightbox imgSrc="https://scx2.b-cdn.net/gfx/news/2018/1-park.jpg"/> <hr />
 
+          </Route>
+
+          <Route path="/lifting-state">
+            <Squares />
+            <SignUp minLength={12}/>
           </Route>
        
 

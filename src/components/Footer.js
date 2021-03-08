@@ -18,6 +18,9 @@ const Footer = () => (
             <li className="list-group-item">
                 <Link to="/lifecycle">Lifecycle Challenges</Link>
             </li>
+            <li className="list-group-item">
+                <Link to="/lifting-state">Lifting State Challenges</Link>
+            </li>
         </ul>
     </footer>
     )
