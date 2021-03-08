@@ -27,6 +27,9 @@ import FourOhFour from '../FourOhFour'
 import Squared from './forms/Squared'
 import Squares from './liftingstate/Squares'
 import SignUp from './liftingstate/SignUp'
+import Button from './liftingstate/Button'
+import Form from './liftingstate/Form'
+import Max from './liftingstate/Max'
 
 
 let colours = [
@@ -36,6 +39,8 @@ let colours = [
   "#009EAD",
   "#395967",
 ];
+
+
 
 const Stuff = ( {displaySquare} ) => (
   <Router>
@@ -115,6 +120,9 @@ const Stuff = ( {displaySquare} ) => (
           <Route path="/lifting-state">
             <Squares />
             <SignUp minLength={12}/>
+            <Button handleUpdate={ (value) => console.log(value) } />
+            <Form handleSubmit={ (value) => console.log(value) }/>
+            <Max count={[1, 2, 10]} />
           </Route>
        
 

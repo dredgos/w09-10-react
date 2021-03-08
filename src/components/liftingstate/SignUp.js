@@ -11,7 +11,16 @@ class SignUp extends Component {
             confirmpw: "",
         }
 
+        this.handleChangePassword = this.handleChangePassword.bind(this);
+        this.handleChangeConfirm = this.handleChangeConfirm.bind(this);
+    }
 
+    handleChangePassword(e) {
+        this.setState({ password: e.currentTarget.value })
+    }
+
+    handleChangeConfirm(e) {
+        this.setState({ confirmpw: e.currentTarget.value })
     }
 
     render() {
@@ -25,12 +34,12 @@ class SignUp extends Component {
                 <form className="form-group">
                     <Password 
                         label="Password" 
-                        handleChange={ (e) => this.setState({ password: e.currentTarget.value })}
+                        handleChange={ this.handleChangePassword }
                         check={meetsCriteria}
                         />
                     <Password 
                         label="Confirm Password" 
-                        handleChange={ (e) => this.setState({ confirmpw: e.currentTarget.value })}
+                        handleChange={ this.handleChangeConfirm }
                         check={meetsCriteria}
                         />
                 </form>

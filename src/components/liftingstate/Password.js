@@ -1,6 +1,6 @@
 const Password = ({label, handleChange, check}) => (
     <div>
-        <label for={ label }>{ label }</label>
+        <label htmlFor={ label }>{ label }</label>
         <input 
         id = {label}
         type="password"
