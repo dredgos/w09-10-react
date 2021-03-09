@@ -30,6 +30,10 @@ import SignUp from './liftingstate/SignUp'
 import Button from './liftingstate/Button'
 import Form from './liftingstate/Form'
 import Max from './liftingstate/Max'
+import Articles from './news/Articles'
+import Article from './news/Article'
+import CreateArticle from './news/CreateArticle'
+
 
 
 let colours = [
@@ -51,7 +55,7 @@ const Stuff = ( {displaySquare} ) => (
 
           <Paragraph> This is my amazing app! </Paragraph>
 
-
+        {/* Routes for all the components challenges       */}
         </Route>
 
           <Route path="/components">
@@ -64,7 +68,7 @@ const Stuff = ( {displaySquare} ) => (
 
             <SquareClass colour="hotpink"/><hr />
 
-
+          {/* Routes for all the state challenges       */}
           </Route>
 
           <Route path="/state">
@@ -83,12 +87,14 @@ const Stuff = ( {displaySquare} ) => (
             
           </Route>
 
+          {/* Routes practicing the render match params       */}
+
           <Route path="/squares/:colour" render={( {match} ) => ( <Square colour={match.params.colour} />)} />            
-
-
 
           <Route path="/steps/:max/:step" render={( {match} ) => ( <StepCounter max={+match.params.max} step={+match.params.step} />)} />
 
+
+          {/* Routes for all the forms challenges       */}
           <Route path="/forms">
             
             <Length /><hr />
@@ -108,6 +114,7 @@ const Stuff = ( {displaySquare} ) => (
           </Route>
 
 
+          {/* Routes for all the lifecycle challenges       */}
           <Route path="/lifecycle">
             
             <GodCounter /><hr />
@@ -117,14 +124,26 @@ const Stuff = ( {displaySquare} ) => (
 
           </Route>
 
+
+          {/* Routes for all the lifting state/passing data down challenges       */}
           <Route path="/lifting-state">
             <Squares colour="hotpink"/>
             <SignUp minLength={12}/>
             <Button handleUpdate={ (value) => console.log(value) } />
-            <Form handleSubmit={ (value) => console.log(value) }/>
-            
+            <Form handleSubmit={ (value) => console.log(value) }/>            
           </Route>
-       
+
+
+          {/* Routes for all the AJAX challenges       */}
+          <Route exact path="/news/create">
+            <CreateArticle />
+          </Route>
+
+          <Route exact path="/news">
+            <Articles />
+          </Route>
+
+          <Route exact path="/news/:id" render={( {match} ) => ( <Article id={match.params.id}/>)} />
 
       
       <FourOhFour />

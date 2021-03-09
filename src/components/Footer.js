@@ -21,6 +21,9 @@ const Footer = () => (
             <li className="list-group-item">
                 <Link to="/lifting-state">Lifting State and Passing Data Down Challenges</Link>
             </li>
+            <li className="list-group-item">
+                <Link to="/news">News Challenges</Link>
+            </li>
         </ul>
     </footer>
     )
