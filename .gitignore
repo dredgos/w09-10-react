@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /.pnp
+/src/axiosConfig.js
 .pnp.js
 
 # testing
