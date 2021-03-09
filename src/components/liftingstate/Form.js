@@ -18,9 +18,10 @@ class Form extends Component {
 
 
     handleClick() {
-        this.setState({name: "", email: ""});
         let {handleSubmit} = this.props;
         handleSubmit({...this.state});
+        
+        this.setState({name: "", email: ""});
     }
 
     handleName(e) {

@@ -118,11 +118,11 @@ const Stuff = ( {displaySquare} ) => (
           </Route>
 
           <Route path="/lifting-state">
-            <Squares />
+            <Squares colour="hotpink"/>
             <SignUp minLength={12}/>
             <Button handleUpdate={ (value) => console.log(value) } />
             <Form handleSubmit={ (value) => console.log(value) }/>
-            <Max count={[1, 2, 10]} />
+            
           </Route>
        
 

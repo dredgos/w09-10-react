@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import Password from './Password';
 
 class SignUp extends Component {
@@ -36,11 +36,13 @@ class SignUp extends Component {
                         label="Password" 
                         handleChange={ this.handleChangePassword }
                         check={meetsCriteria}
+                        value={password}
                         />
                     <Password 
                         label="Confirm Password" 
                         handleChange={ this.handleChangeConfirm }
                         check={meetsCriteria}
+                        value={confirmpw}
                         />
                 </form>
             </div>

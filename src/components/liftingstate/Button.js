@@ -14,7 +14,8 @@ class Button extends Component {
 
     handleClick() {
         let {clicked} = this.state;
-        this.setState({clicked: clicked += 1})
+        clicked += 1;
+        this.setState({clicked: clicked})
 
         let {handleUpdate} = this.props;
         handleUpdate(clicked);
