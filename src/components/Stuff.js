@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-
+import { Router, Route, Switch } from 'react-router-dom'
+import history from '../history'
 import HeaderClass from './state/HeaderClass'
 import Paragraph from './Paragraph'
 import Square from './Square'
@@ -29,7 +29,7 @@ import Squares from './liftingstate/Squares'
 import SignUp from './liftingstate/SignUp'
 import Button from './liftingstate/Button'
 import Form from './liftingstate/Form'
-import Max from './liftingstate/Max'
+// import Max from './liftingstate/Max'
 import Articles from './news/Articles'
 import Article from './news/Article'
 import CreateArticle from './news/CreateArticle'
@@ -47,7 +47,7 @@ let colours = [
 
 
 const Stuff = ( {displaySquare} ) => (
-  <Router>
+  <Router history={ history }>
     <>        
       <HeaderClass>Hello World!</HeaderClass>
       <Switch>
@@ -139,11 +139,11 @@ const Stuff = ( {displaySquare} ) => (
             <CreateArticle />
           </Route>
 
-          <Route exact path="/news">
+          <Route exact path="/news/:id" render={( {match} ) => ( <Article id={match.params.id}/>)} />
+          <Route path="/news">
             <Articles />
           </Route>
 
-          <Route exact path="/news/:id" render={( {match} ) => ( <Article id={match.params.id}/>)} />
 
       
       <FourOhFour />

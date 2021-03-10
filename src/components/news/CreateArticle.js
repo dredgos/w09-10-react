@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import axios from '../../axiosConfig';
+import history from '../../history';
 
 class CreateArticle extends Component {
 
@@ -44,9 +45,10 @@ class CreateArticle extends Component {
                 title: "",
                 content: "",
                 tags: "",
-            })
-
+            });
+            
         });
+        history.push("/news")
     }
 
     render() {
@@ -62,7 +64,8 @@ class CreateArticle extends Component {
                     value={title}
                     type="text" 
                     id="title" 
-                    name="title" />
+                    name="title" 
+                />
                 <label htmlFor="content">Content</label>
                 <input 
                     onChange={this.handleChangeContent} 
@@ -70,7 +73,8 @@ class CreateArticle extends Component {
                     value={content}
                     type="text" 
                     id="content" 
-                    name="content"/>
+                    name="content"
+                />
                 <label htmlFor="tags">Tags</label>
                 <input 
                     onChange={this.handleChangeTags} 
@@ -78,7 +82,8 @@ class CreateArticle extends Component {
                     value={tags}
                     type="text" 
                     id="tags" 
-                    name="tags"/>
+                    name="tags"
+                />
                 <button className="btn btn-primary mb-4">Submit</button>
                 
             </form>

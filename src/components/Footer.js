@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => (
     <footer>
+        <h5>Links</h5>
         <ul className="list-group">
             <li className="list-group-item">
                 <Link to="/">Home</Link>

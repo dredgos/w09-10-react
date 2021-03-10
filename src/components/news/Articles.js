@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import axios from '../../axiosConfig';
+import { Link } from 'react-router-dom'
 
 class Articles extends Component {
 
@@ -18,8 +19,8 @@ class Articles extends Component {
             this.setState({
                 loaded: true,
                 articles: data.data,
-            })
-        })
+            });
+        });
     }
 
     render() {
@@ -31,7 +32,7 @@ class Articles extends Component {
                 <ul className="list-group">
                     {articles.map(article => (
                         <li key={article.id} className="list-group-item">
-                            <a href={article.id}>{article.title}</a>
+                            <Link to={"/news/" + article.id}>{article.title}</Link>
                         </li>
                     ))}
                 </ul>

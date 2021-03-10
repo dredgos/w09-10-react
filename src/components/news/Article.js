@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import axios from '../../axiosConfig';
 import Comments from './Comments';
+import CreateComment from './CreateComment';
 
 
 class Article extends Component {
@@ -31,7 +32,7 @@ class Article extends Component {
         
         let { loaded, article } = this.state;
 
-        return ( !loaded ? <p>loading content......</p> :
+        return  !loaded ? <p>loading content......</p> :
             <>
                 <div className="mt-4 mb-4">
                     <h4 className="mb-4">{article.title}</h4>
@@ -42,19 +43,17 @@ class Article extends Component {
                         <li key={index}>
                             {tag}
                         </li>
-                    ))} 
+                    ))}; 
                     </ul>
                 </div>
                 <div>   
                     <Comments articleID={article.id} />
+                    <CreateComment articleID={article.id} />
                 </div>
             </>
-        );
+        
     }
 }
 
-Article.propTypes = {
-
-};
 
 export default Article;
