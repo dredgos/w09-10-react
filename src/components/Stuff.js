@@ -33,7 +33,17 @@ import Form from './liftingstate/Form'
 import Articles from './news/Articles'
 import Article from './news/Article'
 import CreateArticle from './news/CreateArticle'
-
+import ClickedHooks from './hooks/ClickedHooks'
+import SquareHooks from './hooks/SquareHooks'
+import ToggleTextHooks from './hooks/ToggleTextHooks'
+import CounterHooks from './hooks/CounterHooks'
+import StepCounterHooks from './hooks/StepCounterHooks'
+import CatchMeHooks from './hooks/CatchMeHooks'
+import RollCallHooks from './hooks/RollCallHooks'
+import PasswordStrengthHooks from './hooks/PasswordStrengthHooks'
+import TempConvertorHooks from './hooks/TempConvertorHooks'
+import ListHooks from './hooks/ListHooks'
+import ColoursHooks from './hooks/ColoursHooks'
 
 
 let colours = [
@@ -142,6 +152,21 @@ const Stuff = ( {displaySquare} ) => (
           <Route exact path="/news/:id" render={( {match} ) => ( <Article id={match.params.id}/>)} />
           <Route path="/news">
             <Articles />
+          </Route>
+
+          {/* Routes for all the Hooks challenges       */}
+          <Route exact path="/hooks">
+            <ClickedHooks /> <hr />
+            <SquareHooks colour="hotpink"/><hr />
+            <ToggleTextHooks initial="Hello" alternate="World"/><hr />
+            <CounterHooks initial={50} max={100} /><hr />
+            <StepCounterHooks max={100} step={5} /><hr />
+            <CatchMeHooks jump={100} /><hr />
+            <RollCallHooks names={['Name 1', 'Name 2', 'Name 3', 'Name 4']} /><hr />
+            <PasswordStrengthHooks /><hr />
+            <TempConvertorHooks /><hr />
+            <ListHooks /><hr />
+            <ColoursHooks colours={colours}/><hr />
           </Route>
 
 
