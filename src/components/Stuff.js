@@ -44,6 +44,7 @@ import PasswordStrengthHooks from './hooks/PasswordStrengthHooks'
 import TempConvertorHooks from './hooks/TempConvertorHooks'
 import ListHooks from './hooks/ListHooks'
 import ColoursHooks from './hooks/ColoursHooks'
+import DieHooks from './hooks/DieHooks'
 
 
 let colours = [
@@ -167,6 +168,7 @@ const Stuff = ( {displaySquare} ) => (
             <TempConvertorHooks /><hr />
             <ListHooks /><hr />
             <ColoursHooks colours={colours}/><hr />
+            <DieHooks sides={6} /> <hr />
           </Route>
 
 
