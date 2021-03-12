@@ -6,7 +6,8 @@ const ListHooks = () => {
     let handleChange = (e) => setInput(e.currentTarget.value)
 
     let [list, setList] = useState([]);
-    let handleClick = () => {
+    let handleClick = (e) => {
+            e.preventDefault();
             setList([...list, input]);
             setInput("");
         }

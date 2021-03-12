@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const ColoursHooks = ({colours}) => {
+const ColoursHooks = ({ colours }) => {
 
     let [index, setIndex] = useState(0);
     let handleClick = () => setIndex((index + 1) % colours.length);
