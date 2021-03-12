@@ -45,6 +45,8 @@ import TempConvertorHooks from './hooks/TempConvertorHooks'
 import ListHooks from './hooks/ListHooks'
 import ColoursHooks from './hooks/ColoursHooks'
 import DieHooks from './hooks/DieHooks'
+import ClickedReducer from './useReducer/ClickedReducer'
+import StepCounterReducer from './useReducer/StepCounterReducer'
 
 
 let colours = [
@@ -169,6 +171,12 @@ const Stuff = ( {displaySquare} ) => (
             <ListHooks /><hr />
             <ColoursHooks colours={colours}/><hr />
             <DieHooks sides={6} /> <hr />
+          </Route>
+
+          {/* Routes for all the useReducer challenges       */}
+          <Route exact path="/usereducer">
+            <ClickedReducer /><hr />
+            <StepCounterReducer max={100} step={5} /><hr />
           </Route>
 
 
